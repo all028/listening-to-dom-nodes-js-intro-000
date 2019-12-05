@@ -34,18 +34,6 @@ function bubble(e) {
 for (let i = 0; i < divs.length; i++) {
   divs[i].addEventListener('click', bubble);
 }
-Now click on the div containing "5". You should see
-
-5 bubbled
-4 bubbled
-3 bubbled
-2 bubbled
-1 bubbled
-In the console, you can see the event starts at div 5, and then it bubbles up to the topmost node. Along the way, it triggers any other nodes that are listening for the event -- in this case, 'click'.
-
-Try clicking on a node that's not so deeply nested -- you should still see the event bubble up, starting at the node that you clicked and hitting every node up the tree until it reaches the top.
-
-What about capturing? In order to capture, we need to set the third argument to addEventListener to true. Let's try it out.
 
 divs = document.querySelectorAll('div');
 
